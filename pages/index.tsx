@@ -22,7 +22,7 @@ const Home = ({ data } : IPros) => {
 }
 
 export const getServerSideProps = async () => {
-  const { data } = await axios.get("http://localhost:3000/api/projects")
+  const { data } = await axios.get(`https://aymenjdily.netlify.app/api/projects`)
 
   return {
     props : {
