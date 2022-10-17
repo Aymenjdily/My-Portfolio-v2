@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -15,12 +20,11 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+::-webkit-scrollbar{
+  background-color: #272932;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #B9E3C6;
 }
