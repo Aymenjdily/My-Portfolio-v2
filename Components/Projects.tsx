@@ -14,9 +14,9 @@ interface IPros {
 const Projects = ({ data } : IPros) => {
   return (
     <div className='bg-white flex items-center justify-center py-20 px-10'>
-      <motion.div
-        whileInView={{ y:[200,0] }}
-        transition={{ duration:1}}
+      <div
+        // whileInView={{ y:[200,0] }}
+        // transition={{ duration:1}}
       >
         <div className='flex flex-wrap gap-20 justify-center'>
           {
@@ -49,7 +49,7 @@ const Projects = ({ data } : IPros) => {
             ))
           }
         </div>
-      </motion.div>
+      </div>
         {/* {
             data.map((item) => (
                 <div

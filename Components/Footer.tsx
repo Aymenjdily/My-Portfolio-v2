@@ -5,12 +5,12 @@ import Link from 'next/link'
 
 const Footer = () => {
   return (
-    <div className='h-[100vh] font-Quicksand gap-8 bg-black items-center flex flex-col justify-center'>
+    <div className='md:h-[100vh] h-[50vh] font-Quicksand gap-8 bg-black items-center flex flex-col justify-center'>
         
-        <h1 className='font-bold md:text-[120px] text-[40px] text-green capitalize'>
+        <h1 className='font-bold md:text-[120px] sm:text-[90px] text-[40px] text-green capitalize'>
             find me
         </h1>
-        <div className='flex flex-wrap gap-10 md:text-[150px] text-[50px] items-center justify-center text-white'>
+        <div className='flex flex-wrap gap-10 md:text-[150px] sm:text-[90px] text-[40px] items-center justify-center text-white'>
           <Link
             href='https://github.com/Aymenjdily'
             target="_blank"

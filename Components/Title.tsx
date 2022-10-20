@@ -4,16 +4,11 @@ import { motion } from 'framer-motion';
 
 const Title = () => {
   return (
-    <Parallax className='h-[100vh] bg-black flex items-center justify-center' blur={{ min: -15, max: 15 }} strength={300}>
-        <Background className='h-[100vh] flex flex-row gap-5 text-center items-center justify-center font-Quicksand'>
-            <motion.p 
-                whileInView={{ x:[-300,0] }}
-                transition={{ duration: 1 }}
-                className='lg:text-[130px] md:text-[70px] sm:text-[50px] text-[40px] capitalize font-bold text-white'
-            >
-                here are some of my projects
-            </motion.p>
-        </Background>
+    <Parallax className='md:h-[100vh] h-[50vh] w-full bg-white flex items-center justify-center text-center' >
+      <div className='md:h-[100vh] h-[50vh] w-full flex flex-col items-center justify-center md:gap-10'>
+        <h1 className='lg:text-[150px] md:text-[130px] sm:text-[130px] text-[50px] font-bold text-black'>Here some of</h1>
+        <h1 className='lg:text-[150px] md:text-[130px] sm:text-[130px] text-[50px] font-bold text-black'>my projects</h1>
+      </div>
     </Parallax>
   )
 }

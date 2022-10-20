@@ -5,17 +5,12 @@ import { Parallax, Background } from 'react-parallax'
 const Quote = () => {
   return (
     <>
-        <Parallax className='h-[100vh] w-full bg-green flex items-center justify-center' blur={{ min: -15, max: 15 }} strength={300}>
-            <Background className='flex capitalize w-full font-Quicksand '>
-                <motion.h1
-                        whileInView={{ x:[-200,0] }}
-                        transition={{ duration: 1.5 }}
-                        className='lg:text-[120px] md:text-[90px] sm:text-[70px] text-[35px] w-full font-bold text-black text-center uppercase'
-                    >
-                        Nice to meet you !
-                </motion.h1>
-            </Background>
-        </Parallax>
+      <Parallax className='md:h-[100vh] h-[50vh] w-full bg-green flex items-center justify-center text-center' >
+        <div className='md:h-[100vh] h-[50vh] w-full flex flex-col items-center justify-center md:gap-10'>
+          <h1 className='lg:text-[150px] md:text-[130px] sm:text-[130px] text-[50px] font-bold text-black'>Nice to</h1>
+          <h1 className='lg:text-[150px] md:text-[130px] sm:text-[130px] text-[50px] font-bold text-black'>meet You !</h1>
+        </div>
+      </Parallax>
     </>
   )
 }
