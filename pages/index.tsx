@@ -1,74 +1,40 @@
-import { Caption, Caption2, Footer, Header, Name, Projects, Quote, Title } from '../Components'
-import { Project } from '../types'
-import axios from "axios"
+import Generator from '../Container/Generator/Generator'
+import { motion } from 'framer-motion'
 
-interface IPros {
-  data : Project[]
-}
-
-const Home = ({ data } : IPros) => {
-  console.log(data)
+const Home = () => {
   return (
-    <div className='w-full bg-white'>
-        <div className='sm:px-16 px-4 flex items-center justify-start bg-white'>
-          <div className='xl:max-w-[1280px] w-full font-Quicksand'>
-            <Header/>
-          </div>
+    <motion.div
+      initial={{y:"100%"}}
+      animate={{y:"0%"}}
+      transition={{duration:0.75, ease:"easeOut"}}
+      exit={{opacity:1}}
+      className='absolute h-[100vh] top-0 left-0 w-full bg-white lg:px-48 px-16 md:overflow-hidden overflow-visible'
+    >
+      <main className=''>
+        <div className='mt-96 mb-52 p-1 overflow-hidden'>
+          <motion.h1
+            animate={{y:0}}
+            initial={{y:"100%"}}
+            transition={{delay:0.5,duration:0.5}}
+            className='text-6xl text-center lg:text-right lg:text-9xl font-extrabold capitalize text-black'
+          >
+            Hello there,            
+          </motion.h1>
         </div>
 
-        <div className='sm:px-16 px-4 flex items-center justify-center bg-black'>
-          <div className='xl:max-w-[1280px] w-full font-Quicksand'>
-            <Name/>
+        <div className='flex justify-between flex-col sm:flex-row items-center gap-10 md:pb-0 pb-5'>
+          <div className='font-bold text-3xl flex-1'>
+            <span className='text-green text-3xl capitalize'>
+              nice to meet you !
+            </span>
+          </div>
+          <div className='flex-1'>
+            <Generator/>
           </div>
         </div>
-
-        <div className='sm:px-16 px-4 flex items-center justify-center bg-white'>
-          <div className='xl:max-w-[1280px] w-full font-Quicksand'>
-            <Caption/>
-          </div>
-        </div>
-
-        <div className='sm:px-16 px-4 flex items-center justify-center bg-black'>
-          <div className='xl:max-w-[1280px] w-full font-Quicksand'>
-            <Caption2/>
-          </div>
-        </div>
-
-        <div className='sm:px-16 px-4 flex items-center justify-center bg-white'>
-          <div className='xl:max-w-[1280px] w-full font-Quicksand'>
-            <Title/>
-          </div>
-        </div>
-
-        <div className='sm:px-16 px-4 flex items-center justify-center bg-white'>
-          <div className='xl:max-w-[1280px] w-full font-Quicksand'>
-            <Projects data = {data}/>
-          </div>
-        </div>
-
-        <div className='sm:px-16 px-4 flex items-center justify-center bg-green'>
-          <div className='xl:max-w-[1280px] w-full font-Quicksand'>
-            <Quote/>
-          </div>
-        </div>
-        
-        <div className='sm:px-16 px-4 flex items-center justify-center bg-black'>
-          <div className='xl:max-w-[1280px] w-full font-Quicksand'>
-            <Footer/>
-          </div>
-        </div>
-    </div>
+      </main>
+    </motion.div>
   )
-}
-
-export const getServerSideProps = async () => {
-  const { data } = await axios.get(`https://aymenjdily.netlify.app/api/projects`)
-
-  return {
-    props : {
-      data : data
-    }
-  }
 }
 
 export default Home

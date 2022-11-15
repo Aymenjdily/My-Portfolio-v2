@@ -16,7 +16,7 @@ module.exports = {
         white:"#fff"
       },
       fontFamily: {
-        Quicksand : ["Quicksand", "sans-serif"],
+        Quicksand : ["Jost", "sans-serif"],
         Paytone : ["Paytone One" , "sans-serif"]
       },
     },
