@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react'
 import { Parallax, Background } from 'react-parallax'
 import { motion } from 'framer-motion'

@@ -5,7 +5,7 @@ import { AnimatePresence } from 'framer-motion'
 import Navbar from '../Container/Navbar/Navbar'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
-function MyApp({ Component,  pageProps, router}: AppProps) {
+function MyApp({ Component,  pageProps, router}: AppProps | any) {
   const store = new QueryClient(
     {
       defaultOptions: {

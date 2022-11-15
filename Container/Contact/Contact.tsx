@@ -32,9 +32,9 @@ const Contact = () => {
                         <span className='text-green'>*</span>
                     </label>
                     <input type="text" placeholder='Full Name' id="" {...register("fullName")} className="bg-black outline-none border-b-[1px] border-white text-green py-3 "/>
-                    <p className='text-[#FF5C5C] capitalize font-semibold'>
+                    {/* <p className='text-[#FF5C5C] capitalize font-semibold'>
                         {errors.fullName?.message} 
-                    </p>
+                    </p> */}
                 </div>
 
                 <div className='flex flex-col gap-3'>
@@ -43,9 +43,9 @@ const Contact = () => {
                         <span className='text-green'>*</span>
                     </label>
                     <input type="text" placeholder='Email@example.com' {...register("email")} className="bg-black outline-none border-b-[1px] border-white text-green py-3"/>
-                    <p className='text-[#FF5C5C] capitalize font-semibold'>
+                    {/* <p className='text-[#FF5C5C] capitalize font-semibold'>
                         {errors.fullName?.message}
-                    </p>
+                    </p> */}
                 </div>
 
                 <div className='flex flex-col gap-3'>
@@ -54,9 +54,9 @@ const Contact = () => {
                         <span className='text-green'>*</span>
                     </label>
                     <textarea placeholder='Your Message...' rows={5} {...register("message")} className="bg-black outline-none border-b-[1px] border-white text-green py-3 w-full"/>
-                    <p className='text-[#FF5C5C] capitalize font-semibold'>
+                    {/* <p className='text-[#FF5C5C] capitalize font-semibold'>
                         {errors.message?.message}
-                    </p>
+                    </p> */}
                 </div>
             </div>
 
