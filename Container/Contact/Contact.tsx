@@ -33,7 +33,7 @@ const Contact = () => {
                     </label>
                     <input type="text" placeholder='Full Name' id="" {...register("fullName")} className="bg-black outline-none border-b-[1px] border-white text-green py-3 "/>
                     <p className='text-[#FF5C5C] capitalize font-semibold'>
-                        {errors.fullName?.message}
+                        {errors.fullName?.message} 
                     </p>
                 </div>
 
@@ -53,7 +53,7 @@ const Contact = () => {
                         Message {" "}
                         <span className='text-green'>*</span>
                     </label>
-                    <textarea placeholder='Your Message...' rows="5" {...register("message")} className="bg-black outline-none border-b-[1px] border-white text-green py-3 w-full"/>
+                    <textarea placeholder='Your Message...' rows={5} {...register("message")} className="bg-black outline-none border-b-[1px] border-white text-green py-3 w-full"/>
                     <p className='text-[#FF5C5C] capitalize font-semibold'>
                         {errors.message?.message}
                     </p>
